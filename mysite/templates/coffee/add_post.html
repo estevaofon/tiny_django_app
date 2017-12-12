@@ -1,0 +1,28 @@
+        {% extends 'coffee/base_bootstrap.html' %}
+	{% load staticfiles %}
+	{% block title_block %}
+		Add Category
+	{% endblock %}
+	
+	{% block body_block %}
+		<div>
+			<h1>Add a Post</h1>
+			<form role="form" id="category_form" method="post" action="{% url 'add_post' %}">
+				{% csrf_token %}
+				{% for hidden in form.hidden_fields %}
+	                {{ hidden }}
+	            {% endfor %}
+
+	            {% for field in form.visible_fields %}
+                        <div class="dainput">
+	                {{ field.errors }}
+	                {{ field.help_text }}
+	                {{ field }}
+                        </div>
+	            {% endfor %}
+
+                    <button class="btn btn-primary" type="submit" name="submit">Create Post</button>
+	        </form>
+		</div>	
+        
+	{% endblock %}

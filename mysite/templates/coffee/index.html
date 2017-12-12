@@ -1,0 +1,18 @@
+{% extends 'coffee/base_bootstrap.html' %}
+<!DOCTYPE html>
+<html>
+
+{% block body_block %}
+<h1>Top Posts</h1>
+
+{% for post in posts %}
+<div class="card border-primary mb-3" style="max-width: 35rem;">
+  <div class="card-body text-primary">
+      <h4 class="card-title">{{post.title}}</h4>
+    <p class="card-text">{{post.body|linebreaks}}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+</html>

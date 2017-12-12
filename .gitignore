@@ -1,0 +1,8 @@
+*.pdf
+*.pyc
+*.DS_Store
+db.sqlite3
+*.key
+env/
+wenv/
+*.swp

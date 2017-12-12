@@ -1,0 +1,13 @@
+.container{
+  width: 57%;
+  margin-left: 31%; 
+}
+.content{
+    padding-top: 5%;
+}
+.card-body{
+    padding: 20px;
+}
+.dainput{
+    padding-bottom: 2%;
+}

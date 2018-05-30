@@ -7,3 +7,13 @@ Requirements
 ```bash
 $pip install Django
 ```
+Running
+-------
+Create the database
+```bash
+$python manage.py migrate
+```
+Then
+```bash
+$python manage.py runserver
+```
